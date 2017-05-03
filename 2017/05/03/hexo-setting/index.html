@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Hexo SetUp | Gwang&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Hexo,Hexo SetUp,npm" />
+    
+    <meta name="description" content="1. Node.js가 설치된 상태의 터미널에서 npm i -g hexo-cli 입력12# npm 을 이용해 hexo-cli 설치$ npm i -g hexo-cli 2. hexo init blog 입력123456# hexo init 만 실행하면 현재 디렉토리에서 초기 설정파일 생성# 아래는 blog 라는 이름의 폴더를 생성해서 그 안에 Hexo 블로그를 위한">
+<meta name="keywords" content="Hexo,Hexo SetUp,npm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo SetUp">
+<meta property="og:url" content="http://yoursite.com/2017/05/03/hexo-setting/index.html">
+<meta property="og:site_name" content="Gwang&#39;s blog">
+<meta property="og:description" content="1. Node.js가 설치된 상태의 터미널에서 npm i -g hexo-cli 입력12# npm 을 이용해 hexo-cli 설치$ npm i -g hexo-cli 2. hexo init blog 입력123456# hexo init 만 실행하면 현재 디렉토리에서 초기 설정파일 생성# 아래는 blog 라는 이름의 폴더를 생성해서 그 안에 Hexo 블로그를 위한">
+<meta property="og:updated_time" content="2017-05-03T14:46:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo SetUp">
+<meta name="twitter:description" content="1. Node.js가 설치된 상태의 터미널에서 npm i -g hexo-cli 입력12# npm 을 이용해 hexo-cli 설치$ npm i -g hexo-cli 2. hexo init blog 입력123456# hexo init 만 실행하면 현재 디렉토리에서 초기 설정파일 생성# 아래는 blog 라는 이름의 폴더를 생성해서 그 안에 Hexo 블로그를 위한">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Front-end Developer Gwang&#39;s Blog</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mac-OS-X/">Mac OS X</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mac-OS-X/Setting/">Setting</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/">Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/Hexo/">Hexo</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Web/Hexo/">Hexo</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Web/Hexo/SetUp/">SetUp</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-hexo-setting" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo SetUp
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/05/03/hexo-setting/" class="article-date">
+            <time datetime="2017-05-03T05:28:37.000Z" itemprop="datePublished">2017-05-03</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Hexo/">Hexo</a>, <a class="tag-link" href="/tags/Hexo-SetUp/">Hexo SetUp</a>, <a class="tag-link" href="/tags/npm/">npm</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h4 id="1-Node-js가-설치된-상태의-터미널에서-npm-i-g-hexo-cli-입력"><a href="#1-Node-js가-설치된-상태의-터미널에서-npm-i-g-hexo-cli-입력" class="headerlink" title="1. Node.js가 설치된 상태의 터미널에서 npm i -g hexo-cli 입력"></a>1. Node.js가 설치된 상태의 터미널에서 <code>npm i -g hexo-cli</code> 입력</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># npm 을 이용해 hexo-cli 설치</span></div><div class="line">$ npm i -g hexo-cli</div></pre></td></tr></table></figure>
+<h4 id="2-hexo-init-blog-입력"><a href="#2-hexo-init-blog-입력" class="headerlink" title="2. hexo init blog 입력"></a>2. <code>hexo init blog</code> 입력</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># hexo init 만 실행하면 현재 디렉토리에서 초기 설정파일 생성</span></div><div class="line"><span class="comment"># 아래는 blog 라는 이름의 폴더를 생성해서 그 안에 Hexo 블로그를 위한 초기 설정파일들 생성</span></div><div class="line">$ hexo init blog</div><div class="line">...</div><div class="line"><span class="comment"># 마지막에 아래와 같은 문구가 나오면 Hexo 블로그 초기 설정파일 생성 성공</span></div><div class="line">INFO  Start blogging with Hexo!</div></pre></td></tr></table></figure>
+<h4 id="3-hexo를-사용하기-위한-node-modules-설치"><a href="#3-hexo를-사용하기-위한-node-modules-설치" class="headerlink" title="3. hexo를 사용하기 위한 node_modules 설치"></a>3. hexo를 사용하기 위한 node_modules 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># hexo init 으로 현재 디렉토리에서 설정 파일을 생성했다면 현재 위치에서 npm install 을 실행한다.</span></div><div class="line"><span class="comment"># 아래는 blog 라는 이름의 폴더를 생성했을 경우 blog 폴더로 디렉토리 이동</span></div><div class="line">$ <span class="built_in">cd</span> blog</div><div class="line"><span class="comment"># 파일의 내용을 보여주는 cat 명령어로 package.json의 내용 확인</span></div><div class="line">$ cat package.json</div><div class="line">&#123;</div><div class="line">  <span class="string">"name"</span>: <span class="string">"hexo-site"</span>,</div><div class="line">  <span class="string">"version"</span>: <span class="string">"0.0.0"</span>,</div><div class="line">  <span class="string">"private"</span>: <span class="literal">true</span>,</div><div class="line">  <span class="string">"hexo"</span>: &#123;</div><div class="line">    <span class="string">"version"</span>: <span class="string">""</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"dependencies"</span>: &#123;</div><div class="line">    <span class="string">"hexo"</span>: <span class="string">"^3.2.0"</span>,</div><div class="line">    <span class="string">"hexo-generator-archive"</span>: <span class="string">"^0.1.4"</span>,</div><div class="line">    <span class="string">"hexo-generator-category"</span>: <span class="string">"^0.1.3"</span>,</div><div class="line">    <span class="string">"hexo-generator-index"</span>: <span class="string">"^0.2.0"</span>,</div><div class="line">    <span class="string">"hexo-generator-tag"</span>: <span class="string">"^0.2.0"</span>,</div><div class="line">    <span class="string">"hexo-renderer-ejs"</span>: <span class="string">"^0.2.0"</span>,</div><div class="line">    <span class="string">"hexo-renderer-stylus"</span>: <span class="string">"^0.3.1"</span>,</div><div class="line">    <span class="string">"hexo-renderer-marked"</span>: <span class="string">"^0.2.10"</span>,</div><div class="line">    <span class="string">"hexo-server"</span>: <span class="string">"^0.2.0"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment"># npm install 으로 package.json에 있는 "dependencies"의 값에 저장돼 있는 모듈들을 설치</span></div><div class="line">blog $ npm install</div></pre></td></tr></table></figure>
+<h4 id="4-hexo가-제대로-설치-됐는지-확인"><a href="#4-hexo가-제대로-설치-됐는지-확인" class="headerlink" title="4. hexo가 제대로 설치 됐는지 확인"></a>4. hexo가 제대로 설치 됐는지 확인</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># hexo server 명령어 실행</span></div><div class="line">blog $ hexo server</div><div class="line">INFO  Start processing</div><div class="line">INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</div><div class="line"><span class="comment"># 위와 같이 나온다면 성공</span></div><div class="line"><span class="comment"># 브라우저 주소창에 http://0.0.0.0:4000/ 를 입력해서 hexo 블로그가 생성된걸 확인 할 수 있다.</span></div></pre></td></tr></table></figure>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/05/03/hexo-setting/" data-id="cj294s249000427vz4h3h9ycy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/owl423" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/05/03/hexo-usage/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Hexo Usage
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/05/03/Set-Tree-Instruction/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">MAC OS X Tree 명령어 설치하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2017/05/03/hexo-usage/" class="title">Hexo Usage</a></p>
+                            <p class="item-date"><time datetime="2017-05-03T14:44:19.000Z" itemprop="datePublished">2017-05-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2017/05/03/hexo-setting/" class="title">Hexo SetUp</a></p>
+                            <p class="item-date"><time datetime="2017-05-03T05:28:37.000Z" itemprop="datePublished">2017-05-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Mac-OS-X/">Mac OS X</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Mac-OS-X/Setting/">Setting</a></p>
+                            <p class="item-title"><a href="/2017/05/03/Set-Tree-Instruction/" class="title">MAC OS X Tree 명령어 설치하기</a></p>
+                            <p class="item-date"><time datetime="2017-05-02T15:32:29.000Z" itemprop="datePublished">2017-05-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/05/03/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2017-05-02T15:11:23.000Z" itemprop="datePublished">2017-05-03</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/">Mac OS X</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/Setting/">Setting</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/Setting/Tree-instruction/">Tree instruction</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/">Hexo</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/SetUp/">SetUp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/Usage/">Usage</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hexo-SetUp/" style="font-size: 10px;">Hexo SetUp</a> <a href="/tags/Hexo-Usage/" style="font-size: 10px;">Hexo Usage</a> <a href="/tags/Homebrew/" style="font-size: 10px;">Homebrew</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/tree/" style="font-size: 10px;">tree</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 gwang</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/05/03/hexo-setting/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
