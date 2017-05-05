@@ -3,15 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: tree | Gwang&#39;s blog</title>
+    <title>Mac OS X에 Node 설치하기 | Gwang&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Gwang&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/tags/tree/index.html">
+        <meta name="keywords" content="npm,node,nvm" />
+    
+    <meta name="description" content="nvm 이란? nvm은 Node Version Manager의 약자로 node.js의 버전을 관리해준다.  nvm의 필요성 node.js의 하위 버전에 맞춰 개발된 어플리케이션을 실행 할 때 현재 버전에서 하위버전으로 Downgrade 하는 방법은 node.js를삭제하고 다시 설치하는 방법 뿐이지만, nvm을 사용할 경우 nvm use {version} 을">
+<meta name="keywords" content="npm,node,nvm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac OS X에 Node 설치하기">
+<meta property="og:url" content="http://yoursite.com/2017/05/04/set-nvm-instruction/index.html">
 <meta property="og:site_name" content="Gwang&#39;s blog">
+<meta property="og:description" content="nvm 이란? nvm은 Node Version Manager의 약자로 node.js의 버전을 관리해준다.  nvm의 필요성 node.js의 하위 버전에 맞춰 개발된 어플리케이션을 실행 할 때 현재 버전에서 하위버전으로 Downgrade 하는 방법은 node.js를삭제하고 다시 설치하는 방법 뿐이지만, nvm을 사용할 경우 nvm use {version} 을">
+<meta property="og:updated_time" content="2017-05-05T01:25:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gwang&#39;s blog">
+<meta name="twitter:title" content="Mac OS X에 Node 설치하기">
+<meta name="twitter:description" content="nvm 이란? nvm은 Node Version Manager의 약자로 node.js의 버전을 관리해준다.  nvm의 필요성 node.js의 하위 버전에 맞춰 개발된 어플리케이션을 실행 할 때 현재 버전에서 하위버전으로 Downgrade 하는 방법은 node.js를삭제하고 다시 설치하는 방법 뿐이지만, nvm을 사용할 경우 nvm use {version} 을">
     
 
     
@@ -123,58 +130,140 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>tree</em>
+    <a class="page-title-link" href="/categories/Mac-OS-X/">Mac OS X</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Mac-OS-X/Setting/">Setting</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Mac-OS-X/Setting/nvm/">nvm</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-set-nvm-instruction" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Mac-OS-X/">Mac OS X</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Mac-OS-X/Setting/">Setting</a>
-            </div>
-            <div class="date"><time datetime="2017-05-02T15:32:29.000Z" itemprop="datePublished">2017-05-03</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/03/Set-Tree-Instruction/">MAC OS X Tree 명령어 설치하기</a>
+        Mac OS X에 Node 설치하기
         </h1>
     
 
-        <p class="article-excerpt">
-            1. Homebrew 설치 (아래 코드 터미널에 복사 붙여넣기)  1$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/05/04/set-nvm-instruction/" class="article-date">
+            <time datetime="2017-05-04T11:01:56.000Z" itemprop="datePublished">2017-05-04</time>
+        </a>
+    </div>
 
-Homebrew는 Mac OS 용 패키지 관리자
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/node/">node</a>, <a class="tag-link" href="/tags/npm/">npm</a>, <a class="tag-link" href="/tags/nvm/">nvm</a>
+    </div>
 
-2. 터미널에 brew 를 입력하여 설치 확인  12345
-        </p>
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="nvm-이란"><a href="#nvm-이란" class="headerlink" title="nvm 이란?"></a>nvm 이란?</h2><blockquote>
+<p>nvm은 Node Version Manager의 약자로 node.js의 버전을 관리해준다.</p>
+</blockquote>
+<h2 id="nvm의-필요성"><a href="#nvm의-필요성" class="headerlink" title="nvm의 필요성"></a>nvm의 필요성</h2><blockquote>
+<p>node.js의 하위 버전에 맞춰 개발된 어플리케이션을 실행 할 때 현재 버전에서 하위버전으로 Downgrade 하는 방법은 node.js를삭제하고 다시 설치하는 방법 뿐이지만, nvm을 사용할 경우 <code>nvm use {version}</code> 을 통해 쉽게 버전을 바꿀 수 있다. node.js의 신버전이 안정성이 떨어져서 아직 테스트가 필요 할 때도 유용하게 사용 가능하다.</p>
+</blockquote>
+<h2 id="설치-방법"><a href="#설치-방법" class="headerlink" title="설치 방법"></a>설치 방법</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 다운 받는 명령어</span></div><div class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash</div><div class="line"><span class="comment"># 실행 시키는 명령어</span></div><div class="line">$ <span class="built_in">source</span> /Users/<span class="variable">$USER</span>/.nvm/nvm.sh</div></pre></td></tr></table></figure>
+<blockquote>
+<p><code>source</code> 명령어를 통해 설치한 nvm을 실행 시킬 수 있지만, 매번 터미널을 켤 때 마다 해야한다.<br>터미널이 켜질 때 마다 자동으로 실행 시키기 위해서 <code>~/.bash_profile</code>에 아래와 같이 추가한다.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> \<span class="built_in">source</span> /Users/<span class="variable">$USER</span>/.nvm/nvm.sh &gt;&gt; ~/.bash_profile</div></pre></td></tr></table></figure>
+<p>.bash_profile은 bash이 열릴 때 마다 실행되는 파일이기 때문에 터미널 실행시 항상 nvm을 사용할 수 있게 된다.</p>
+<h2 id="nvm-명령어"><a href="#nvm-명령어" class="headerlink" title="nvm 명령어"></a>nvm 명령어</h2><p>현재 실행중인 nvm 버전 확인<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm version</div></pre></td></tr></table></figure></p>
+<p>설치 가능한 Node 버전 탐색<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm ls-remote</div></pre></td></tr></table></figure></p>
+<p>새로운 Node 버전 설치<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ex) nvm install 6.9.4</span></div><div class="line">$ nvm install &#123;version&#125;</div></pre></td></tr></table></figure></p>
+<p>설치된 Node 버전 보기<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm ls</div></pre></td></tr></table></figure></p>
+<p>사용할 Node 버전 설정<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ex) nvm use 6.9.4</span></div><div class="line">$ nvm use &#123;version&#125;</div></pre></td></tr></table></figure></p>
+<p>설치된 Node 버전 제거<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm uninstall &#123;version&#125;</div></pre></td></tr></table></figure></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/05/04/set-nvm-instruction/" data-id="cj2b6nv300000mjvzzx2n8paj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -195,6 +284,19 @@ Homebrew는 Mac OS 용 패키지 관리자
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/05/04/hexo-theme/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo Theme Setting</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -327,11 +429,13 @@ Homebrew는 Mac OS 용 패키지 관리자
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://yoursite.com/2017/05/04/set-nvm-instruction/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
