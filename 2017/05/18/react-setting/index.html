@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>React.js 개발환경 설정 | Gwang&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="npm,NodeJS,react.js,javascript" />
+    
+    <meta name="description" content="React.js 개발환경 설정에는 NodeJS를 이용해서 하기 때문에 NodeJS 및 npm이 설치 필요 Node.js를 설치하고 npm install -g npm을 통해 npm 버전을 최신버전으로 업데이트 하는걸 추천. 구버전 npm의 경우(npm ver 3.0.0 미만) nested 구조로 node_modules 폴더를 구성하기 때문에 용량을 많이 잡">
+<meta name="keywords" content="npm,NodeJS,react.js,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React.js 개발환경 설정">
+<meta property="og:url" content="http://yoursite.com/2017/05/18/react-setting/index.html">
+<meta property="og:site_name" content="Gwang&#39;s blog">
+<meta property="og:description" content="React.js 개발환경 설정에는 NodeJS를 이용해서 하기 때문에 NodeJS 및 npm이 설치 필요 Node.js를 설치하고 npm install -g npm을 통해 npm 버전을 최신버전으로 업데이트 하는걸 추천. 구버전 npm의 경우(npm ver 3.0.0 미만) nested 구조로 node_modules 폴더를 구성하기 때문에 용량을 많이 잡">
+<meta property="og:updated_time" content="2017-05-18T11:00:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React.js 개발환경 설정">
+<meta name="twitter:description" content="React.js 개발환경 설정에는 NodeJS를 이용해서 하기 때문에 NodeJS 및 npm이 설치 필요 Node.js를 설치하고 npm install -g npm을 통해 npm 버전을 최신버전으로 업데이트 하는걸 추천. 구버전 npm의 경우(npm ver 3.0.0 미만) nested 구조로 node_modules 폴더를 구성하기 때문에 용량을 많이 잡">
+    
+
+    
+
+    
+        <link rel="icon" href="https://icons8.com/web-app/37385/Sheep-2" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Front-end Developer Gwang&#39;s Blog</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Javascript/">Javascript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Javascript/React-js/">React.js</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mac-OS-X/">Mac OS X</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mac-OS-X/Setting/">Setting</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/">Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/FDS04/">FDS04</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/Hexo/">Hexo</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Javascript/">Javascript</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Javascript/React-js/">React.js</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Javascript/React-js/Setting/">Setting</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-react-setting" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        React.js 개발환경 설정
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/05/18/react-setting/" class="article-date">
+            <time datetime="2017-05-18T08:15:22.000Z" itemprop="datePublished">2017-05-18</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/NodeJS/">NodeJS</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>, <a class="tag-link" href="/tags/npm/">npm</a>, <a class="tag-link" href="/tags/react-js/">react.js</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <blockquote>
+<p>React.js 개발환경 설정에는 NodeJS를 이용해서 하기 때문에 <a href="https://owl423.github.io/2017/05/04/set-nvm-instruction/" target="_blank" rel="external">NodeJS 및 npm이 설치</a> 필요</p>
+<p>Node.js를 설치하고 npm install -g npm을 통해 npm 버전을 최신버전으로 업데이트 하는걸 추천. 구버전 npm의 경우(npm ver 3.0.0 미만) nested 구조로 node_modules 폴더를 구성하기 때문에 용량을 많이 잡아먹지만, 신버전 npm의 경우(npm ver 3.0.0 이상) 일반 디렉토리 구조로 생성해서 용량이 많이 줄어든다.</p>
+</blockquote>
+<h3 id="1-Global-Package-설치"><a href="#1-Global-Package-설치" class="headerlink" title="1. Global Package 설치"></a>1. Global Package 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># npm 으로 babel, webpack, webpack-dev-server 를 설치한다.</span></div><div class="line"> $ npm install -g babel webpack webpack-dev-server</div></pre></td></tr></table></figure>
+<ul>
+<li>babel - ECMASciprt6를 지원하지 않는 환경에서 ECMAScript6 Syntax를 사용할 수 있게 도와준다.</li>
+<li>webpack - 모듈 번들러로, 브라우저 위에서 import(require)을 할 수 있고, js 파일들을 하나로 합쳐준다.</li>
+<li>webpack-dev-server -  webpack에서 지원하는 간단한 개발 서버로 별도의 서버 구축없이 웹 서버를 제공해주고, hot-loader를 통해 코드가 수정될 때 마다 자동으로 리로드 되게 해준다.</li>
+</ul>
+<h3 id="2-프로젝트-생성"><a href="#2-프로젝트-생성" class="headerlink" title="2. 프로젝트 생성"></a>2. 프로젝트 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># react 개발 환경 세팅할 디렉토리 생성</span></div><div class="line">$ mkdir react </div><div class="line"><span class="comment"># 해당 디렉토리로 이동</span></div><div class="line">$ <span class="built_in">cd</span> react</div><div class="line"><span class="comment"># 개발 환경을 저장해 놓을 package.json 생성</span></div><div class="line">$ npm init</div></pre></td></tr></table></figure>
+<h3 id="3-Dependency-Plugin-설치"><a href="#3-Dependency-Plugin-설치" class="headerlink" title="3. Dependency, Plugin 설치"></a>3. Dependency, Plugin 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 해당 디렉토리 안에 있는 node_modules 폴더에 react 와 react-dom 설치하고 package.json에 의존 패키지로 해당 모듈을 추가해준다.</span></div><div class="line">$ npm install --save react react-dom</div><div class="line"><span class="comment"># babel에서 사용될 플러그인 설치, 개발환경에서만 해당 모듈이 필요한 경우 --save-dev(-D) 옵션을 줘서 설치한다.</span></div><div class="line">$ npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-es2015 webpack webpack-dev-server</div></pre></td></tr></table></figure>
+<blockquote>
+<p>webpack 과 webpack-dev-server를 로컬 모듈로 설치한 이유는 webpack의 -hot 옵션을 사용하고, 커맨드라인 환경에서 <code>webpack-dev-server</code>로 바로 실행하기 위함이다.</p>
+</blockquote>
+<h3 id="4-디렉토리-구조-이해-및-파일-생성"><a href="#4-디렉토리-구조-이해-및-파일-생성" class="headerlink" title="4. 디렉토리 구조 이해 및 파일 생성"></a>4. 디렉토리 구조 이해 및 파일 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">react</div><div class="line">├── package.json</div><div class="line">├── public            <span class="comment"># server publick path</span></div><div class="line">│   └── index.html    <span class="comment"># main page</span></div><div class="line">├── src               <span class="comment"># React.js 프로젝트 루트</span></div><div class="line">│   ├── components    <span class="comment"># 컴포넌트 폴더</span></div><div class="line">│   │   └── App.js    <span class="comment"># App 컴포넌트</span></div><div class="line">│   └── index.js      <span class="comment"># Webpack Entry point</span></div><div class="line">└── webpack.config.js <span class="comment"># Webpack 설정파일</span></div></pre></td></tr></table></figure>
+<p><strong>Webpack Entry point</strong>는 webpack 모듈에서 가장 처름으로 읽어들이는 파일이다. 이 파일에서부터 시작해서, 해당 파일에서 import한 다른 모듈들을 불러온다.</p>
+<h3 id="5-컴파일러-서버-및-로더-설정"><a href="#5-컴파일러-서버-및-로더-설정" class="headerlink" title="5. 컴파일러, 서버 및 로더 설정"></a>5. 컴파일러, 서버 및 로더 설정</h3><h4 id="webpack-설정-webpack-config-js"><a href="#webpack-설정-webpack-config-js" class="headerlink" title="webpack 설정(webpack.config.js)"></a><strong>webpack 설정(webpack.config.js)</strong></h4><blockquote>
+<p>webpack.config.js -&gt; ECMAScript6를 컴파일 해주고 개발 서버를 열어주는 webpack의 설정파일</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">   <span class="comment">// entry 부터 시작해서 필요한 모듈을 모두 불러온다.</span></div><div class="line">    entry: <span class="string">'./src/index.js'</span>,</div><div class="line">    <span class="comment">// 불러온 모듈을 bundle.js 라는 하나의 파일로 합친다.</span></div><div class="line">    output: &#123;</div><div class="line">        <span class="attr">path</span>: __dirname + <span class="string">'/public/'</span>,</div><div class="line">        <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="comment">// webpack-dev-server 설정 </span></div><div class="line">    <span class="comment">// 0.0.0.0(localhost)</span></div><div class="line">    <span class="comment">// 4000번 포트를 이용해 public 폴더 내부의 index.html을 보여준다.</span></div><div class="line">    devServer: &#123;</div><div class="line">        <span class="attr">hot</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">inline</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">host</span>: <span class="string">'0.0.0.0'</span>,</div><div class="line">        <span class="attr">port</span>: <span class="number">4000</span>,</div><div class="line">        <span class="attr">contentBase</span>: __dirname + <span class="string">'/public/'</span>,</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    <span class="attr">module</span>: &#123;</div><div class="line">        <span class="attr">loaders</span>: [</div><div class="line">            &#123;</div><div class="line">                <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">                <span class="comment">// babel-loader 을 사용해서 ES6(es2015), react 문법을 ES5형태로 변환시켜줌</span></div><div class="line">                loaders: <span class="string">'babel-loader'</span>,</div><div class="line">                <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">                <span class="attr">query</span>: &#123;</div><div class="line">                    <span class="attr">cacheDirectory</span>: <span class="literal">true</span>,</div><div class="line">                    <span class="attr">presets</span>: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h4 id="package-json-설정"><a href="#package-json-설정" class="headerlink" title="package.json 설정"></a><strong>package.json 설정</strong></h4><blockquote>
+<p>package.json의 scripts block을 아래와 같이 수정한다. </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// webpack-dev-server 를 </span></div><div class="line"><span class="comment">// --hot 옵션(코드가 변경되면 실시간으로 reload)과 </span></div><div class="line"><span class="comment">// --host 옵션(localhost가 아닌 외부 서버에서 dev-server 실행시 필요한 옵션 localhost인 경우 생략)</span></div><div class="line"><span class="comment">// 으로 실행 한다.</span></div><div class="line"><span class="string">"scripts"</span> : &#123;</div><div class="line">  <span class="string">"start"</span> : <span class="string">"webpack-dev-server --hot --host 0.0.0.0"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 커맨드 라인에 npm start 를 입력하면 </span></div><div class="line"><span class="comment"># webpack-dev-server --hot --host 0.0.0.0를 입력한 것과 같은 효과</span></div><div class="line">$ npm start</div></pre></td></tr></table></figure>
+<h3 id="6-HTML-및-js-수정"><a href="#6-HTML-및-js-수정" class="headerlink" title="6. HTML 및 js 수정"></a>6. HTML 및 js 수정</h3><h4 id="public-index-html"><a href="#public-index-html" class="headerlink" title="public/index.html"></a><strong>public/index.html</strong></h4><blockquote>
+<p>localhost로 접속하면 보여질 html 파일</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>React App<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!--React 프로젝트의 root element--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!--webpack으로 생성된 bundle.js 파일을 연결--&gt;</span></div><div class="line">        <span class="comment">&lt;!--react 라이브러리 및 기타 자바스크립트 파일들이 하나로 합쳐진 파일--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="src-components-App-js"><a href="#src-components-App-js" class="headerlink" title="src/components/App.js"></a><strong>src/components/App.js</strong></h4><blockquote>
+<p>React 컴포넌트</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// node_modules 안에 있는 react를 React라는 이름으로 불러옴</span></div><div class="line"><span class="comment">// var React = require('react'); 와 같음</span></div><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="comment">// App class를 React.Component 로 확장 시킴</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    render()&#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello React<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// App 이라는 이름으로 외부에서 접근 할 수 있도록 내보냄</span></div><div class="line"><span class="comment">// module.export = App; 과 같음</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</div></pre></td></tr></table></figure>
+<h4 id="src-index-js"><a href="#src-index-js" class="headerlink" title="src/index.js"></a>src/index.js</h4><blockquote>
+<p>App 컴포넌트를 rootElement에 렌더링</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./components/App'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> rootElement = <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>);</div><div class="line"><span class="comment">// ReactDOM에 있는 render 함수를 이용하여 &lt;App/&gt;을 렌더링</span></div><div class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span>, rootElement);</span></div></pre></td></tr></table></figure>
+<h3 id="7-webpack-dev-server-실행"><a href="#7-webpack-dev-server-실행" class="headerlink" title="7. webpack-dev-server 실행"></a>7. webpack-dev-server 실행</h3><blockquote>
+<p>webpack-dev-server에 hot 옵션이 있기 때문에 App.js를 수정하면 새로고침하지 않아도 알아서 새로고침이 된다.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm start</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="출처-velopert-React-js-강좌-작업환경-설정"><a href="#출처-velopert-React-js-강좌-작업환경-설정" class="headerlink" title="*출처 velopert React.js 강좌 작업환경 설정"></a>*출처 <a href="https://velopert.com/814" target="_blank" rel="external">velopert React.js 강좌 작업환경 설정</a></h3>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/05/18/react-setting/" data-id="cj2viwju40006z8vzazuvur7x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/owl423" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/05/08/vs-code-snippet/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">VS Code snippet 만들기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Javascript/">Javascript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Javascript/React-js/">React.js</a></p>
+                            <p class="item-title"><a href="/2017/05/18/react-setting/" class="title">React.js 개발환경 설정</a></p>
+                            <p class="item-date"><time datetime="2017-05-18T08:15:22.000Z" itemprop="datePublished">2017-05-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/FDS04/">FDS04</a></p>
+                            <p class="item-title"><a href="/2017/05/08/vs-code-snippet/" class="title">VS Code snippet 만들기</a></p>
+                            <p class="item-date"><time datetime="2017-05-08T09:42:33.000Z" itemprop="datePublished">2017-05-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/FDS04/">FDS04</a></p>
+                            <p class="item-title"><a href="/2017/05/08/github-upstream/" class="title">github upstream 사용법</a></p>
+                            <p class="item-date"><time datetime="2017-05-08T01:55:57.000Z" itemprop="datePublished">2017-05-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Mac-OS-X/">Mac OS X</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Mac-OS-X/Setting/">Setting</a></p>
+                            <p class="item-title"><a href="/2017/05/04/set-nvm-instruction/" class="title">Mac OS X에 Node 설치하기</a></p>
+                            <p class="item-date"><time datetime="2017-05-04T11:01:56.000Z" itemprop="datePublished">2017-05-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2017/05/04/hexo-theme/" class="title">Hexo Theme Setting</a></p>
+                            <p class="item-date"><time datetime="2017-05-04T10:40:22.000Z" itemprop="datePublished">2017-05-04</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/React-js/">React.js</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/React-js/Setting/">Setting</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/">Mac OS X</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/Setting/Tree-instruction/">Tree instruction</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/Setting/nvm/">nvm</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/FDS04/">FDS04</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/FDS04/VS-Code/">VS Code</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/FDS04/VS-Code/snippet/">snippet</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/FDS04/github/">github</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/">Hexo</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/SetUp/">SetUp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/Theme/">Theme</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/Usage/">Usage</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">8</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/FDS04/" style="font-size: 10px;">FDS04</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hexo-Hueman/" style="font-size: 10px;">Hexo Hueman</a> <a href="/tags/Hexo-SetUp/" style="font-size: 10px;">Hexo SetUp</a> <a href="/tags/Hexo-Theme/" style="font-size: 10px;">Hexo Theme</a> <a href="/tags/Hexo-Usage/" style="font-size: 10px;">Hexo Usage</a> <a href="/tags/Homebrew/" style="font-size: 10px;">Homebrew</a> <a href="/tags/NodeJS/" style="font-size: 20px;">NodeJS</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/npm/" style="font-size: 20px;">npm</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/react-js/" style="font-size: 10px;">react.js</a> <a href="/tags/snippet/" style="font-size: 10px;">snippet</a> <a href="/tags/text-Editor/" style="font-size: 10px;">text Editor</a> <a href="/tags/tree/" style="font-size: 10px;">tree</a> <a href="/tags/upstream/" style="font-size: 10px;">upstream</a> <a href="/tags/vs-code/" style="font-size: 10px;">vs code</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 gwang</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/05/18/react-setting/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
