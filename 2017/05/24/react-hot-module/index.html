@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/24/react-hot-module/index.html">
 <meta property="og:site_name" content="Gwang&#39;s blog">
 <meta property="og:description" content="react-hot-loader란? React Component에서 코드가 변경 되었을 때 view에서 local state가 사라지는데 코드가 변경 되어도 local state가 유지 되도록 도와주는 모듈  webpack.config.js 수정하기1234567891011121314// 변경 전module: &amp;#123;        loaders: [">
-<meta property="og:updated_time" content="2017-05-24T10:25:41.000Z">
+<meta property="og:updated_time" content="2017-05-24T10:28:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Hot Loader 설정법">
 <meta name="twitter:description" content="react-hot-loader란? React Component에서 코드가 변경 되었을 때 view에서 local state가 사라지는데 코드가 변경 되어도 local state가 유지 되도록 도와주는 모듈  webpack.config.js 수정하기1234567891011121314// 변경 전module: &amp;#123;        loaders: [">
@@ -171,13 +171,17 @@
 </blockquote>
 <h4 id="webpack-config-js-수정하기"><a href="#webpack-config-js-수정하기" class="headerlink" title="webpack.config.js 수정하기"></a>webpack.config.js 수정하기</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 변경 전</span></div><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">        <span class="attr">loaders</span>: [</div><div class="line">            &#123;</div><div class="line">                <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">                <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">                <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">                <span class="attr">query</span>: &#123;</div><div class="line">                  <span class="attr">cacheDirectory</span>: <span class="literal">true</span>,</div><div class="line">                  <span class="attr">presets</span>: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;,</div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 변경 후</span></div><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>: [</div><div class="line">        &#123;</div><div class="line">            <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">            <span class="comment">// string 형태의 loader를 loaders로 이름 바꾸고 배열 형태로 변환 </span></div><div class="line">            <span class="comment">// 'react-hot-loader 추가'</span></div><div class="line">            <span class="comment">// babel-loader만 썼을 경우엔 query로 값을 전달 할 수 있었지만</span></div><div class="line">            <span class="comment">// loader가 많아지면서 babel-loader뒤에 ?string의 형태로 query를 붙여줘야 한다. </span></div><div class="line">            loaders: [<span class="string">'react-hot-loader'</span>, <span class="string">'babel-loader?'</span> + <span class="built_in">JSON</span>.stringify(&#123;</div><div class="line">                <span class="attr">cacheDirectory</span>: <span class="literal">true</span>,</div><div class="line">                <span class="attr">presets</span>: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">            &#125;)],</div><div class="line">            <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Component 의 constructor가 변경 될 경우 hot-reload 기능 말고 새로고침을 해줘야 한다.</p>
+</blockquote>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2017/05/24/react-hot-module/" data-id="cj32ugyr4000hk3vzd7ff5vx9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/05/24/react-hot-module/" data-id="cj32ukfhf0005m4vzu568iydy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
